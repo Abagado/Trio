@@ -1,16 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="app">
+    <!-- <p>Правила просты! Нажимайте левой кнопкой мышки</p> -->
+    <img alt="logo" src="./assets/trio-logo(3).png">
+    <Board />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import Board from './components/Board.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld
+    Board
   }
 });
 </script>
@@ -23,5 +26,12 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  user-select:none;
+  -webkit-user-select: none;
+  -khtml-user-select:none;
+  -moz-user-select: none;
+  -ms-uzer-select:none;
+
 }
+
 </style>
