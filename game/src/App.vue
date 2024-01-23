@@ -49,9 +49,17 @@ nav a:first-of-type {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+  header {
+  line-height: 1.5;
+  max-height: 100vh;
+  text-align: center; /* Добавляем выравнивание по центру для вертикальных элементов */
+}
+
+/* Для логотипа вы можете использовать этот блок */
+.logo {
+  display: block;
+  margin: 0 auto 2rem; /* Позиционируем логотип по центру с помощью margin */
+}
 
   header .wrapper {
     display: flex;

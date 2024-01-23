@@ -14,7 +14,7 @@ export default defineComponent({
   },
   methods: {
     fetchUsers() {
-      axios.get('http://127.0.0.1:8080/user/users/?format=json')
+      axios.get('http://127.0.0.1:8080/user/users/')
         .then(response => {
           this.users = response.data;
         })

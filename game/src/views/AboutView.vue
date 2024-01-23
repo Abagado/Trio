@@ -1,4 +1,5 @@
 <template>
+  <body>
   <div class="wrapper fadeInDown">
     <div id="formContent">
       <h2 class="active"> Sign In </h2>
@@ -12,7 +13,7 @@
         <input type="submit" class="fadeIn fourth" value="Log In">
       </form>
     </div>
-  </div>
+  </div></body>
 </template>
 
 <script lang="ts">
@@ -64,13 +65,13 @@ export default {
 
 /* BASIC */
 
-html {
-  background-color: #56baed;
-}
-
 body {
   font-family: "Poppins", sans-serif;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 a {

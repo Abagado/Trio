@@ -47,9 +47,6 @@ export default defineComponent({
 
 /* BASIC */
 
-html {
-  background-color: #56baed;
-}
 
 body {
   font-family: "Poppins", sans-serif;
