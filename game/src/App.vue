@@ -1,18 +1,7 @@
  <script lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import { defineComponent, ref } from 'vue';
-export default defineComponent({
-  mounted() {
-    // При монтировании компонента, начинаем воспроизведение музыки
-    const audio = new Audio('../assets/hang-drum-sister-moon%20(1).mp3/');
-    audio.loop = true; // воспроизведение в цикле
-    audio.play();
-  }
-});
 </script>
 
 <template>
-<music-player></music-player>
   <RouterView />
 </template>
 

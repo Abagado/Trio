@@ -61,7 +61,7 @@ export default defineComponent({
         let gameOver=ref(0);
 
         const end = () => {
-          router.push('/');
+          router.push('/home');
         }
 
         const mousedown = (index) => {

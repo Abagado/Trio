@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper fadeInDown">
     <div id="formContent">
-      <h2 class="inactive underlineHover"> <router-link to="/about">Sign In</router-link> </h2>
+      <h2 class="inactive underlineHover"> <router-link to="/">Sign In</router-link> </h2>
       <h2 class="active"> Sign Up </h2>
       <div class="fadeIn first">
       <img src="../assets/trio-logo(3).png" id="icon" alt="User Icon" />

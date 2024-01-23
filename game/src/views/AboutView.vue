@@ -38,7 +38,7 @@ export default {
       })
       .then(response => {
         if (response.ok) {
-          router.push('/'); // Перенаправление при успешной аутентификации
+          router.push('/home'); // Перенаправление при успешной аутентификации
         } else {
           throw new Error('Invalid credentials'); // Генерация ошибки для обработки неудачной аутентификации
         }

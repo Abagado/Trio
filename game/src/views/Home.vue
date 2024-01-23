@@ -17,7 +17,7 @@ export default defineComponent({
 
 
     const logout = () => {
-      router.push('/about');
+      router.push('/');
     }
 
     return {
@@ -30,10 +30,15 @@ export default defineComponent({
 </script>
 
 <template>
-  <h1>Игра</h1>
-  <input type="submit" class="fadeIn fourth" @click="playGame" value="Играть">
-  <input type="submit" class="fadeIn fourth" @click="showResults" value="Таблица результатов">
-  <input type="submit" class="fadeIn fourth" @click="logout" value="Выход">
+    <div class="wrapper">
+    <h1 class="fadeInDown">
+      Игра
+    </h1>
+     <div class="button-container">
+      <input type="submit" class="fadeIn second" @click="playGame" value="Играть">
+      <input type="submit" class="fadeIn second" @click="showResults" value="Таблица результатов">
+      <input type="submit" class="fadeIn second" @click="logout" value="Выход">
+    </div></div>
 </template>
 
 
@@ -76,8 +81,16 @@ h2 {
   justify-content: center;
   width: 100%;
   min-height: 100%;
+  height: 100vh;
+  text-align: center;
   padding: 20px;
 }
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+}
+
 
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
@@ -113,6 +126,12 @@ h2.active {
   border-bottom: 2px solid #5fbae9;
 }
 
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
@@ -127,13 +146,9 @@ input[type=button], input[type=submit], input[type=reset]  {
   font-size: 13px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
   box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
-  -webkit-border-radius: 5px 5px 5px 5px;
-  border-radius: 5px 5px 5px 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
   margin: 5px 20px 40px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
