@@ -3,31 +3,38 @@ import axios from 'axios';
 import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
 
+interface User {
+  id: number;
+  username: string;
+  score: number;
+}
+
 export default defineComponent({
   data() {
     return {
-      users: []
+      users: [] as User[]
     };
   },
   created() {
-    this.fetchUsers();
+    this.fetchUsers(); // Вызов метода в хуке created чтобы получить пользователей после создания компонента
   },
   methods: {
     fetchUsers() {
       axios.get('http://127.0.0.1:8080/user/users/')
-        .then(response => {
-          this.users = response.data;
-        })
-        .catch(error => {
-          console.error('Ошибка получения данных:', error);
-        });
+          .then(response => {
+            this.users = response.data; // Обновление данных пользователей
+          })
+          .catch(error => {
+            console.error('Ошибка получения данных:', error); // Логирование ошибки
+          });
     },
     end() {
-      this.$router.push({ name: 'Home' });
+      this.$router.push({ name: 'Home' }); // Перенаправление на домашнюю страницу
     }
   }
 });
 </script>
+
 
 <template>
   <div>

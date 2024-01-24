@@ -1,5 +1,12 @@
 {
-  "files": [],
+  "compilerOptions": {
+    // базовые опции компилятора, которые общие для всех ваших проектов
+    // например target, module, strict, и так далее
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["dom", "esnext"],
+    "strict": true
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"
@@ -9,3 +16,4 @@
     }
   ]
 }
+
